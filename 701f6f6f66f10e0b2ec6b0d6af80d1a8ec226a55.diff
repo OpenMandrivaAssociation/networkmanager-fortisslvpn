@@ -1,0 +1,13 @@
+diff --git a/src/nm-fortisslvpn-pinentry.c b/src/nm-fortisslvpn-pinentry.c
+index 91adaff8b9a777fea97ace4d622076b8e7211343..fadbddfc0b417b725d1b3b80972718195e3cf8c0 100644
+--- a/src/nm-fortisslvpn-pinentry.c
++++ b/src/nm-fortisslvpn-pinentry.c
+@@ -131,7 +131,7 @@ main (int argc, char *argv[])
+ 			g_free (escaped);
+ 		} else {
+ 			/* You're not my real pinentry program! */
+-			g_printerr (line);
++			g_printerr ("Error: line from pinentry not understood: '%s'\n", line);
+ 			g_print ("ERR 666 Not understood\n");
+ 		}
+ 		g_free (line);
