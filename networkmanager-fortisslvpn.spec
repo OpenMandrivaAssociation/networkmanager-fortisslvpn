@@ -6,8 +6,8 @@
 
 Summary:	NetworkManager VPN integration for Fortinet SSLVPN
 Name:		%{name}
-Version:	1.3.90
-Release:	2
+Version:	1.4.0
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Url:		http://www.gnome.org/projects/NetworkManager/
@@ -18,6 +18,7 @@ Patch1:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn/-/commit/701f
 
 BuildRequires:  ppp-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gnome-keyring-1)
 BuildRequires:	pkgconfig(libpng)
@@ -27,6 +28,7 @@ BuildRequires:	pkgconfig(libnma)
 
 Requires:	dbus
 Requires:	gtk+3
+Requires:	gtk4
 Requires:	NetworkManager
 Requires:	openfortivpn
 
@@ -52,11 +54,11 @@ with NetworkManager and the GNOME desktop.
 %autosetup -p1 -n %{oname}-%{version}
 
 %build
-%configure					\
-	--disable-static		\
-	--enable-more-warnings	\
-	--without-libnm-glib	\
-	%{nil}
+%configure \
+	--disable-static \
+	--enable-more-warnings \
+	--without-libnm-glib \
+	--with-gtk4
 
 %make_build
 
