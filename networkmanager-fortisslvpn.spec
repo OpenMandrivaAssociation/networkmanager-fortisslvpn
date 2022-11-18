@@ -2,6 +2,8 @@
 %define name %(echo %{oname} | tr [:upper:] [:lower:])
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
+%define _disable_ld_no_undefined 1
+
 %define pppd_version 2.4.5
 
 Summary:	NetworkManager VPN integration for Fortinet SSLVPN
