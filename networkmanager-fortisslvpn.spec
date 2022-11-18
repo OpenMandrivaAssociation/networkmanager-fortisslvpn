@@ -70,5 +70,8 @@ with NetworkManager and the GNOME desktop.
 %find_lang %{oname}
 
 %pre
-%_pre_useradd nm-fortisslvpn %{_localstatedir}/lib/fortisslvpn /bin/false
-
+getent group nm-fortisslvpn >/dev/null || groupadd -r nm-fortisslvpn
+getent passwd nm-fortisslvpn >/dev/null || \
+        useradd -r -g nm-fortisslvpn -d / -s /sbin/nologin \
+        -c "Default user for running openfortivpn spawned by NetworkManager" nm-fortisslvpn
+exit 0
