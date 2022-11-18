@@ -14,7 +14,7 @@ Url:		http://www.gnome.org/projects/NetworkManager/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{url_ver}/NetworkManager-fortisslvpn-%{version}.tar.xz
 # (upstream)
 #Patch0:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn/-/commit/66d431f18fd4812ed984790c877d965b35b69612.diff
-Patch1:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn/-/commit/701f6f6f66f10e0b2ec6b0d6af80d1a8ec226a55.diff
+#Patch1:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn/-/commit/701f6f6f66f10e0b2ec6b0d6af80d1a8ec226a55.diff
 
 BuildRequires:  ppp-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
