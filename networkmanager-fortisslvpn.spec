@@ -12,9 +12,8 @@ Version:	1.4.0
 Release:	2
 License:	GPLv2+
 Group:		System/Base
-Url:		http://www.gnome.org/projects/NetworkManager/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{url_ver}/NetworkManager-fortisslvpn-%{version}.tar.xz
-
+Url:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn
+Source0:	https://download.gnome.org/sources/NetworkManager-fortisslvpn/1.4/NetworkManager-fortisslvpn-%{version}.tar.xz
 
 BuildRequires:  ppp-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
