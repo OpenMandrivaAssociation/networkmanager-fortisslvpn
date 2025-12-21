@@ -15,6 +15,11 @@ Group:		System/Base
 Url:		https://gitlab.gnome.org/GNOME/NetworkManager-fortisslvpn
 Source0:	https://download.gnome.org/sources/NetworkManager-fortisslvpn/1.4/NetworkManager-fortisslvpn-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  ppp-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtk4)
